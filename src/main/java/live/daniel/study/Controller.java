@@ -11,6 +11,6 @@ public class Controller {
 
     @RequestMapping("/")
     public String index() {
-        return "!";
+        return "Hello";
     }
 }
