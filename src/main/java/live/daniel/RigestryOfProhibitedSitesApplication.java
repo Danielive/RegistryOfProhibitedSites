@@ -1,12 +1,12 @@
-package live.daniel.study;
+package live.daniel;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MultiWebApplication {
+public class RigestryOfProhibitedSitesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MultiWebApplication.class, args);
+		SpringApplication.run(RigestryOfProhibitedSitesApplication.class, args);
 	}
 }

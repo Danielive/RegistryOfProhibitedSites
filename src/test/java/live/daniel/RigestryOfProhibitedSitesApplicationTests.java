@@ -1,4 +1,4 @@
-package live.daniel.study;
+package live.daniel;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class MultiWebApplicationTests {
+public class RigestryOfProhibitedSitesApplicationTests {
 
 	@Test
 	public void contextLoads() {
