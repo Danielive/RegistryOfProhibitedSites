@@ -1,63 +1,47 @@
 package live.daniel.webapps.controller;
 
-import live.daniel.webapps.model.Registry;
-import live.daniel.webapps.persistence.RegistryRepository;
+import live.daniel.webapps.service.WebService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by Daniel on 29.09.2017.
  */
-@RestController
+@Controller
 public class WebController {
+
     @Autowired
-    RegistryRepository repository;
+    private WebService service;
 
-    @RequestMapping("/save")
-    public String process(){
-        repository.save(new Registry("warungharta.com", "103.11.40.1", "29.09.2017"));
-        repository.save(new Registry("unibet.com.au", "103.227.169.1", "29.09.2017"));
-        repository.save(new Registry("kupitmagnit.net", "184.168.221.12", "29.09.2017"));
-        repository.save(new Registry("slotvalue2016.ru", "185.43.222.89", "14.09.2017"));
-        repository.save(new Registry("sitemarathon.win", "88.150.168.144", "14.09.2017"));
-        return "Done";
+    //get list sites
+    @RequestMapping("/start")
+    @ResponseBody
+    public String getListOfRegistry() {
+        return service.findAll();
     }
 
-    @RequestMapping("/findall")
-    public String findAll(){
-        String result = "<html>";
-
-        for(Registry registry : repository.findAll()){
-            result += "<div>" + registry.toString() + "</div>";
-        }
-
-        return result + "</html>";
+    //ftl
+    @RequestMapping("/addsite")
+    public String showAddSite(){
+        return "addSite";
     }
 
-    @RequestMapping("/findbyid")
-    public String findById(@RequestParam("id") long id){
-        String result = "";
-        result = repository.findOne(id).toString();
-        return result;
+    //ftl
+    @RequestMapping("/registry")
+    public String showRegistry(){
+        return "registry";
     }
 
-    @RequestMapping("/findbyLink")
-    public String fetchDataByLink(@RequestParam("link") String link){
-        String result = "<html>";
-
-        for(Registry registry: repository.findByLink(link)){
-            result += "<div>" + registry.toString() + "</div>";
-        }
-
-        return result + "</html>";
+    @RequestMapping("/add")
+    public void addSite(@RequestParam("link") String link, @RequestParam("ip") String ip, @RequestParam("date") String date){
+        service.addSite(link, ip, date);
     }
 
-    @RequestMapping("/deleteall")
-    public String findAllAndDelete(){
-        String result = "check";
-        repository.deleteAll();
-        return result = "done";
+    @RequestMapping("/delete")
+    public void deleteAll(@RequestParam("id") long id){
+        service.deleteById(id);
     }
 }
