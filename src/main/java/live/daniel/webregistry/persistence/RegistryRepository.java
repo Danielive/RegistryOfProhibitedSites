@@ -1,6 +1,6 @@
-package live.daniel.webapps.persistence;
+package live.daniel.webregistry.persistence;
 
-import live.daniel.webapps.model.Registry;
+import live.daniel.webregistry.model.Registry;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

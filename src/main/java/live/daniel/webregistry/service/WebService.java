@@ -1,7 +1,7 @@
-package live.daniel.webapps.service;
+package live.daniel.webregistry.service;
 
-import live.daniel.webapps.model.Registry;
-import live.daniel.webapps.persistence.RegistryRepository;
+import live.daniel.webregistry.model.Registry;
+import live.daniel.webregistry.persistence.RegistryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

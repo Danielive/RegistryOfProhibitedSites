@@ -1,4 +1,3 @@
-<%@ page import="live.daniel.webapps.service.WebService" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--DOM--%>
@@ -41,9 +40,7 @@
                     <c:if test="${not empty allSites}">
                         <select class="form-control" name="id">
                             <c:forEach var="site" items="${allSites}">
-                                <%--<c:forEach var="listIDValue" items="${listsID}">--%>
                                 <option value=${site.id}>${site.link}</option>
-                                <%--</c:forEach>--%>
                             </c:forEach>
                         </select>
                     </c:if>

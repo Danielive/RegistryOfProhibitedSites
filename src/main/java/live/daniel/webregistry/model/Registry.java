@@ -1,4 +1,4 @@
-package live.daniel.webapps.model;
+package live.daniel.webregistry.model;
 
 import javax.persistence.*;
 

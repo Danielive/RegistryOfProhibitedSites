@@ -1,7 +1,7 @@
-package live.daniel.webapps.controller;
+package live.daniel.webregistry.controller;
 
-import live.daniel.webapps.model.Registry;
-import live.daniel.webapps.service.WebService;
+import live.daniel.webregistry.model.Registry;
+import live.daniel.webregistry.service.WebService;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
