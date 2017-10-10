@@ -5,6 +5,7 @@
 - PosgreSQL
 - Gradle
 - Tomcat
+- Servlet
 - JSP
 - JSTL
 - JSON
