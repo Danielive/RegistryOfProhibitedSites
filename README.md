@@ -4,3 +4,6 @@
 
 ## Add site to list
 <img src="https://camo.githubusercontent.com/2f97c61fd8a35019784d24e5a4d89aa33852460c/68747470733a2f2f70702e757365726170692e636f6d2f633833373232342f763833373232343334392f35343232302f7253596243675a61626d672e6a7067"/>
+
+## Delete site of list
+<img src="C:\Users\Daniel\Desktop\Screenshot_2.png"/>
