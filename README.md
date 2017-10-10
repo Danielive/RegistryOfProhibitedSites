@@ -3,14 +3,14 @@
 - Spring Boot
 - Spring Data JPA
 - PosgreSQL
-- Gradle 
+- Gradle
 - Tomcat
 - JSP
 - JSTL
 - JSON
 - AngularJS
 - Bootstrap
-- Freemarker
+- FreeMarker
 
 ## List of sites
 <img src="https://camo.githubusercontent.com/d37495a8a5f169936326f57ee43367775b9eff32/68747470733a2f2f70702e757365726170692e636f6d2f633833373232342f763833373232343334392f35343232392f6452475f4c625a596549412e6a7067"/>
