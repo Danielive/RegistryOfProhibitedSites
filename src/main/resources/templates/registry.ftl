@@ -23,6 +23,11 @@
                             Добавить сайт в список
                         </li>
                     </a>
+                    <a href="http://localhost:8080/deletesite" class="btn btn-primary" role="button">
+                        <li>
+                            Удалить сайт из списка
+                        </li>
+                    </a>
                 </ul>
             </menu>
             <div class="panel-body">

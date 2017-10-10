@@ -1,3 +1,7 @@
+<%@ page import="live.daniel.webapps.service.WebService" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--DOM--%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +10,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body ng-app="registryOfProhibitedSites">
-<div class="container" ng-controller="AddSiteController">
+<body class="registryOfProhibitedSites">
+<div class="container">
     <div class="row">
         <div class="col-md-10">
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="deletesite" method="POST">
                 <div class="panel-heading">Реестр запрещенных сайтов</div>
                 <menu>
                     <ul>
@@ -31,35 +35,27 @@
                         </a>
                     </ul>
                 </menu>
-                <legend>Добавление сайта</legend>
+                <legend>Удаление сайта</legend>
                 <div class="form-group">
-                    <label for="link" class="col-sm-4 control-label">Ссылка</label>
-                    <div class="col-sm-8">
-                        <input type="text" ng-model="link" class="form-control" id="link" placeholder="Ссылка">
-                    </div>
+                    <label class="col-sm-4 control-label">Ссылка</label>
+                    <c:if test="${not empty allSites}">
+                        <select class="form-control" name="id">
+                            <c:forEach var="site" items="${allSites}">
+                                <%--<c:forEach var="listIDValue" items="${listsID}">--%>
+                                <option value=${site.id}>${site.link}</option>
+                                <%--</c:forEach>--%>
+                            </c:forEach>
+                        </select>
+                    </c:if>
                 </div>
-                <div class="form-group">
-                    <label for="ip" class="col-sm-4 control-label">IP-адрес</label>
-                    <div class="col-sm-8">
-                        <input type="text" ng-model="ip" class="form-control" id="ip" placeholder="IP-адрес">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="date" class="col-sm-4 control-label">Дата внесения в реестр</label>
-                    <div class="col-sm-8">
-                        <input type="text" ng-model="date" class="form-control" id="date" placeholder="Дата внесения в реестр">
-                    </div>
-                </div>
+
                 <div class="form-group">
                     <div class="col-sm-8 col-sm-offset-4">
-                        <button ng-click="addSite(link, ip, date)" class="btn btn-default">Добавить</button>
+                        <button class="btn btn-default">Удалить</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -20,6 +20,7 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	maven  { url("https://maven-eu.nuxeo.org/nexus/content/repositories/public-releases/") }
 }
 
 dependencies {
@@ -28,5 +29,13 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	runtime('org.postgresql:postgresql')
+	// https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper
+	compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.1'
+	// https://mvnrepository.com/artifact/javax.servlet/servlet-api
+	compile group: 'javax.servlet', name: 'servlet-api', version: '3.0.1'
+	// https://mvnrepository.com/artifact/jstl/jstl
+	compile group: 'jstl', name: 'jstl', version: '1.2'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	// https://mvnrepository.com/artifact/org.json/json
+	compile group: 'org.json', name: 'json', version: '20170516'
 }
