@@ -1,4 +1,5 @@
 # RegistryOfProhibitedSites
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.roskenet/springboot-javafx-support/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.roskenet/springboot-javafx-support)
 ## Stack
 - Spring Boot
 - Spring Data JPA
