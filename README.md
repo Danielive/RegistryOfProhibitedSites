@@ -1,4 +1,4 @@
-# RegistryOfProhibitedSites
+# Registry of prohibited sites
 ## Stack
 - Spring Boot
 - Spring Data JPA
